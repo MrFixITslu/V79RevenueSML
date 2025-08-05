@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M10.75 10.033c.097.02.197.03.3.049l-1.35 2.16a.75.75 0 00.6 1.158h.4l.8-1.28v3.13a.75.75 0 001.5 0v-3.13l.8 1.28h.4a.75.75 0 00.6-1.158l-1.35-2.16c.103-.018.203-.028.3-.049a4.5 4.5 0 10-2.2 0zM4.5 14.25a.75.75 0 000 1.5h.063a5.99 5.99 0 011.082-1.5H4.5zm15-.75a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0v-3a.75.75 0 01.75-.75z' /%3E%3Cpath fill-rule='evenodd' d='M2.21 8.796a.75.75 0 011.054.082 7.5 7.5 0 0113.336-1.597 1 1 0 01.75-.27l4.002.571a.75.75 0 11-.214 1.488l-3.32.475a5.998 5.998 0 01-11.444 2.89 5.995 5.995 0 01-1.15-1.571.75.75 0 01.082-1.054zM4.406 12.24a4.5 4.5 0 017.938-1.548 4.502 4.502 0 013.97 1.548H4.406z' clip-rule='evenodd' /%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CafeMaster AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Set initial theme based on localStorage or system preference
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                '50': '#eff6ff',
+                '100': '#dbeafe',
+                '200': '#bfdbfe',
+                '300': '#93c5fd',
+                '400': '#60a5fa',
+                '500': '#3b82f6',
+                '600': '#2563eb',
+                '700': '#1d4ed8',
+                '800': '#1e40af',
+                '900': '#1e3a8a',
+                '950': '#172554',
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.1/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@^6.25.1",
+    "recharts": "https://esm.sh/recharts@^2.12.7",
+    "react-hot-toast": "https://esm.sh/react-hot-toast@^2.4.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.0.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
